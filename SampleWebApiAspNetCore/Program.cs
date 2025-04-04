@@ -42,6 +42,9 @@ builder.Services.AddDbContext<FoodDbContext>(opt =>
 
 builder.Services.AddAutoMapper(typeof(FoodMappings));
 
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
 var app = builder.Build();
 
 var apiVersionDescriptionProvider = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();
@@ -73,6 +76,9 @@ app.UseCors("AllowAllOrigins");
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.MapControllers();
 
