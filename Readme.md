@@ -1,3 +1,6 @@
+NOTE: this repo is based on https://github.com/FabianGosebrink/ASPNETCore-WebAPI-Sample and copied in testing purposes only.
+
+
 # ASP.NET Core WebApi Sample with HATEOAS, Versioning & Swagger
 
 In this repository I want to give a plain starting point at how to build a WebAPI with ASP.NET Core.
