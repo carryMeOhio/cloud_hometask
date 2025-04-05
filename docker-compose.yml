@@ -1,0 +1,12 @@
+services:
+  webapi:
+    build:
+      context: .  
+      dockerfile: Dockerfile 
+    ports:
+      - "5005:80"
+    environment:
+      ASPNETCORE_HTTPS_PORT: 443
+      ASPNETCORE_URLS: http://+:80 
+      ASPNETCORE_ENVIRONMENT: Development
+    restart: always
